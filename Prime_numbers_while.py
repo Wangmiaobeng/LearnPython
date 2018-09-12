@@ -1,9 +1,7 @@
 from math import sqrt
 # 2-100里面的素数
-j=1
-while j<=100:
+j=2
     i=2
-    k=sqrt(j)
     while i<=k:
         if j%i==0:
             break
