@@ -1,0 +1,20 @@
+# 输入n，用递推法（例如前项之间的关系推导后项，本题为一重循环）
+# 编程求1+2!+3!+...+n!的和并输出。
+
+n=input()
+
+total=0
+def test(n):
+    global total
+    if n==1:
+        total=total+1
+        print(total)
+    else:
+        subtotal=1
+        for a in range(1,n+1):
+            subtotal=subtotal*a
+        total=total+subtotal
+        n=n-1
+        test(n)
+    
+test(n)
